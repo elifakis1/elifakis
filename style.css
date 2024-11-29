@@ -1,0 +1,50 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAD4D4; /* Pale Pink */
+    color: #333; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #E6D6E8; /* Light Lavender */
+    border-bottom: 4px solid #D4E6D4; /* Mint Green */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #D4E6D4; /* Mint Green for headings */
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+a {
+    color: #D4E6D4; /* Mint Green for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #FCE6D4; /* Soft Peach */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
