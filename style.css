@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #FAD4D4; /* Pale Pink */
-    color: #333; /* Dark text for contrast */
+    background-color: #F0F0F0; /* Light Gray */
+    color: #4A4A4A; /* Dark Gray for contrast */
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -10,8 +10,8 @@ body {
 header {
     text-align: center;
     padding: 2rem;
-    background-color: #E6D6E8; /* Light Lavender */
-    border-bottom: 4px solid #D4E6D4; /* Mint Green */
+    background-color: #E0C6E8; /* Soft Lavender */
+    border-bottom: 4px solid #D1E0D1; /* Soft Mint Green */
 }
 
 h1 {
@@ -20,24 +20,38 @@ h1 {
 }
 
 h2 {
-    color: #D4E6D4; /* Mint Green for headings */
+    color: #B2D1B2; /* Soft Green for headings */
+    margin-top: 1.5rem;
 }
 
-main {
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.tablink {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #B2D1B2; /* Soft Green */
+    border: none;
+    border-radius: 5px;
+}
+
+.tablink:hover {
+    background-color: #A1C0A1; /* Slightly Darker Soft Green */
+}
+
+.tabcontent {
     padding: 2rem;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-a {
-    color: #D4E6D4; /* Mint Green for links */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    margin-top: 1rem;
+    background-color: #FFFFFF; /* White background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 footer {
