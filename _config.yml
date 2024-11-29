@@ -3,3 +3,8 @@ description: Hi friends! I'm Elif. I'm a molecular biology and genetics graduate
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://elifakis1.github.io" # the base hostname & protocol for your site
 theme: minima # you can specify a theme here
+sass:
+  style: compressed
+
+# Add custom CSS
+custom_css: "/assets/css/styles.css"
