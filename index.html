@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elif's Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        .section {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about" onclick="showSection('about')">About</a>
+        <a href="#cv" onclick="showSection('cv')">Curriculum Vitae</a>
+        <a href="#blog" onclick="showSection('blog')">Blog Posts</a>
+        <a href="#contact" onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <section id="about" class="section active">
+        <h1>About Me</h1>
+        <p>This is the about section.</p>
+    </section>
+
+    <section id="cv" class="section">
+        <h1>Curriculum Vitae</h1>
+        <p>This is the CV section.</p>
+    </section>
+
+    <section id="blog" class="section">
+        <h1>Blog Posts</h1>
+        <p>This is the blog section.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h1>Contact</h1>
+        <p>This is the contact section.</p>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
