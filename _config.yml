@@ -1,6 +1,6 @@
 title: Elif's Personal Website
 description: Hi friends! I'm Elif. I'm a molecular biology and genetics graduate, and ambitious bioinformatics newbie. I created this website to share my progress with you, and encourage other fresh-starters in the area.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/elifakis" # the subpath of your site, e.g. /blog
 url: "https://elifakis1.github.io" # the base hostname & protocol for your site
 theme: minima # you can specify a theme here
 sass:
