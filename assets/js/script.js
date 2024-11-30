@@ -66,6 +66,7 @@ if (modalCloseBtn) {
 
 // custom select variables
 const select = document.querySelector("[data-select]");
+console.log("Select Element:", select); // Debugging line
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
