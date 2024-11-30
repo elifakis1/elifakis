@@ -129,14 +129,20 @@ z-index : -1;
 .icon-box ion-icon {
 --ionicon-stroke-width : 35px;
 }
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Other existing styles... */
+
+/* Styles for articles */
 article {
     display: none; /* Hide all articles by default */
 }
 
 article:target {
-    display: block; /* Show the active article */
+    display: block; /* Show the active article when targeted */
 }
-
 @keyframes fade {
 0% {
 opacity : 0;
