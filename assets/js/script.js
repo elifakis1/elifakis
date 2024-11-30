@@ -142,18 +142,21 @@ const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+    navigationLinks[i].addEventListener("click", function () {
+        const selectedPage = this.innerHTML.toLowerCase();
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
+        // Remove active class from all pages and links
+        pages.forEach(page => page.classList.remove("active"));
+        navigationLinks.forEach(link => link.classList.remove("active"));
 
-  });
+        // Add active class to the selected page and link
+        for (let j = 0; j < pages.length; j++) {
+            if (selectedPage === pages[j].dataset.page) {
+                pages[j].classList.add("active");
+                this.classList.add("active");
+                window.scrollTo(0, 0);
+                break; // Stop the loop once we find the matching page
+            }
+        }
+    });
 }
