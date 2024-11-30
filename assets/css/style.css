@@ -137,11 +137,6 @@ article:target {
     display: block; /* Show the active article */
 }
 
-/* Optional: Show the first section by default when the page loads */
-article:first-of-type {
-    display: block; /* Show the first article by default */
-animation : fade 0.5s ease backwards;
-}
 @keyframes fade {
 0% {
 opacity : 0;
