@@ -130,10 +130,16 @@ z-index : -1;
 --ionicon-stroke-width : 35px;
 }
 article {
-display : none;
+    display: none; /* Hide all articles by default */
 }
-article.active {
-display : block;
+
+article:target {
+    display: block; /* Show the active article */
+}
+
+/* Optional: Show the first section by default when the page loads */
+article:first-of-type {
+    display: block; /* Show the first article by default */
 animation : fade 0.5s ease backwards;
 }
 @keyframes fade {
@@ -228,7 +234,7 @@ gap : 15px;
 }
 .avatar-box {
 background : var(--bg-gradient-onyx);
-border-radius : 20px;
+border-radius : 30px;
 }
 .info-content .name {
 color : var(--white-2);
