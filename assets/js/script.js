@@ -23,6 +23,9 @@ const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
+console.log("Modal Close Button:", modalCloseBtn); // Debugging line
+console.log("Overlay:", overlay); // Debugging line
+
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
