@@ -1,10 +1,11 @@
 'use strict';
 
 
-
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
+document.addEventListener('DOMContentLoaded', () => {
+    // Element toggle function
+    const elementToggleFunc = function (elem) {
+        elem.classList.toggle("active");
+    };
 
 
 // sidebar variables
@@ -50,8 +51,13 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+if (modalCloseBtn) {
+        modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+    } else {
+        console.error("modalCloseBtn not found in the DOM");
+    }
+    
+    overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
@@ -64,54 +70,45 @@ const filterBtn = document.querySelectorAll("[data-filter-btn]");
 select.addEventListener("click", function () { elementToggleFunc(this); });
 
 // add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
-  });
-}
+ selectItems.forEach(item => {
+        item.addEventListener("click", function () {
+            let selectedValue = this.innerText.toLowerCase();
+            selectValue.innerText = this.innerText;
+            elementToggleFunc(select);
+            filterFunc(selectedValue);
+        });
+    });
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
+    const filterFunc = function (selectedValue) {
+        filterItems.forEach(item => {
+            if (selectedValue === "all") {
+                item.classList.add("active");
+            } else if (selectedValue === item.dataset.category) {
+                item.classList.add("active");
+            } else {
+                item.classList.remove("active");
+            }
+        });
+    };
 
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-
-  }
-
-}
 
 // add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
+ let lastClickedBtn = filterBtn[0];
 
-for (let i = 0; i < filterBtn.length; i++) {
+    filterBtn.forEach(btn => {
+        btn.addEventListener("click", function () {
+            let selectedValue = this.innerText.toLowerCase();
+            selectValue.innerText = this.innerText;
+            filterFunc(selectedValue);
 
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
-  });
-
-}
+            lastClickedBtn.classList.remove("active");
+            this.classList.add("active");
+            lastClickedBtn = this;
+        });
+    });
 
 
 
@@ -121,19 +118,16 @@ const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
 // add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
-}
-
+formInputs.forEach(input => {
+        input.addEventListener("input", function () {
+            // Check form validation
+            if (form.checkValidity()) {
+                formBtn.removeAttribute("disabled");
+            } else {
+                formBtn.setAttribute("disabled", "");
+            }
+        });
+    });
 
 
 // page navigation variables
