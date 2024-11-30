@@ -651,12 +651,14 @@ margin-bottom : 20px;
 .techniques-list {
     list-style-type: disc; /* Use bullet points for techniques */
     margin-left: 20px; /* Indent techniques */
+    color: white;
 }
 
 .techniques-list li {
     margin: 5px 0; /* Space between techniques */
 }.skills-item:not(:last-child) {
 margin-bottom : 15px;
+color: white;
 }
 .skill .title-wrapper {
 display : flex;
