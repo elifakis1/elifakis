@@ -651,14 +651,14 @@ margin-bottom : 20px;
 .techniques-list {
     list-style-type: disc; /* Use bullet points for techniques */
     margin-left: 20px; /* Indent techniques */
-    color:var(--light gray);
+    color: var(--light-gray); /* Use the lighter gray color */
+    font-size: var(--fs-7); /* Set font size to a smaller value */
 }
 
 .techniques-list li {
     margin: 5px 0; /* Space between techniques */
-}.skills-item:not(:last-child) {
-margin-bottom : 15px;
-color:var(--light gray);
+    font-size: var(--fs-7); /* Set font size for list items to be smaller */
+    color: var(--light-gray); /* Ensure the text color is lighter */
 }
 .skill .title-wrapper {
 display : flex;
