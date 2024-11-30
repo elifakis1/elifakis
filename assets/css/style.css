@@ -140,7 +140,7 @@ article {
     display: none; /* Hide all articles by default */
 }
 
-article:active {
+article.active {
     display: block; /* Show the active article when targeted */
 }
 @keyframes fade {
