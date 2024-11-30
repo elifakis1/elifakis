@@ -640,9 +640,22 @@ line-height : 1.6;
 margin-bottom : 20px;
 }
 .skills-list {
-padding : 20px;
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
 }
-.skills-item:not(:last-child) {
+
+.skills-item {
+    margin-bottom: 20px; /* Space between skill items */
+}
+
+.techniques-list {
+    list-style-type: disc; /* Use bullet points for techniques */
+    margin-left: 20px; /* Indent techniques */
+}
+
+.techniques-list li {
+    margin: 5px 0; /* Space between techniques */
+}.skills-item:not(:last-child) {
 margin-bottom : 15px;
 }
 .skill .title-wrapper {
