@@ -966,8 +966,8 @@ max-height : 584px;
 gap : 25px;
 }
 .avatar-box {
-    width: 80px; /* Set the width to match the image size */
-    height: 80px; /* Set the height to match the image size */
+    width: 100px; /* Set the width to match the image size */
+    height: 100px; /* Set the height to match the image size */
     overflow: hidden; /* Hide any overflow */
     display: flex; /* Center the image */
     justify-content: center; /* Center the image horizontally */
@@ -1053,7 +1053,7 @@ transform : translate(30px,-30px);
 border-radius : 30px;
 }
 .testimonials-avatar-box img {
-width : 80px;
+width : auto;
 }
 .testimonials-item-title {
 margin-bottom : 10px;
